@@ -19,3 +19,8 @@ dados %>%
 dados %>%
   group_by(Month) %>%
   arrange(desc(Wind)) # Coloca os valores da variável Wind em ordem decrescente
+
+dados %>%
+  select(Temp, Month) %>%
+  filter(Month == "9") %>%
+  summarise(mean(Temp))
