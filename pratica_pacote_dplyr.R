@@ -24,3 +24,11 @@ dados %>%
   select(Temp, Month) %>%
   filter(Month == "9") %>%
   summarise(mean(Temp))
+
+d <- dados %>%
+  select(Day, Ozone) %>%
+  group_by(Day) %>%
+  arrange(Ozone) # Agrupa os valores do menor para o maior
+d
+ 
+View(d)
