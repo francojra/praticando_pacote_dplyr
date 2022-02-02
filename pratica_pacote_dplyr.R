@@ -16,4 +16,6 @@ dados %>%
   filter(Month == "7") %>% # Filtrar apenas o mês 7
   summarise(mean(Solar.R)) # Calcular a média
   
-
+dados %>%
+  group_by(Month) %>%
+  arrange(desc(Wind)) # Coloca os valores da variável Wind em ordem decrescente
