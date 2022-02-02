@@ -1,0 +1,19 @@
+
+# Prática com o pacote dplyr ---------------------------------------------------------------------------------------------------------------
+
+# Autora: Jeanne Franco --------------------------------------------------------------------------------------------------------------------
+
+# Data: 01-02-2022 -------------------------------------------------------------------------------------------------------------------------
+
+dados <- datasets::airquality # Carregar dados no dataset do R
+dados # Verificar dados no console do R
+View(dados) # Visualizar conjunto de dados em nova janela
+
+library(dplyr) # Carregar pacote dplyr
+
+dados %>%
+  select(Solar.R, Month) %>% # Selecionar duas variáveis
+  filter(Month == "7") %>% # Filtrar apenas o mês 7
+  summarise(mean(Solar.R)) # Calcular a média
+  
+
